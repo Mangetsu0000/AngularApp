@@ -1,0 +1,18 @@
+<div class="row mt-5">
+    <div class="col mb-2" >
+        <div class="todo col" *ngFor="let todo of todos;">
+            <div class="name">{{todo.name}}</div>
+            <div class="content">{{todo.content}}</div>
+            <button class="btn btn-danger">Delete</button>
+        </div>
+    </div>
+    <div class="col">Form
+        <div class="row">
+            <input [(ngModel)]="name" type="text" class="form-control class">
+            <input [(ngModel)]="content" type="text" class="form-control class">
+            <button (click)="fillTodo()" class="btn btn-success">Add Todo</button>
+        </div>
+        </div>
+    </div>
+  
+
