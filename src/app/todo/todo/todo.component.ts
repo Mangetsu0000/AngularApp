@@ -9,22 +9,23 @@ import { TodoService } from '../services/todo.service';
 })
 export class TodoComponent implements OnInit {
 
-  constructor(private todoService: TodoService){}
-  name: string = '';
-  content: string = '';
   todos:Todo[] = [];
+  todo = new Todo();   //new Todo() creates a variable that contains a reference to the object Todo(). To fix this we need to create a new object for every element. In the addTodo() method (this.todo = new Todo)  
 
+  constructor(private todoService: TodoService){}
+  
   ngOnInit(): void {
-    
-    
-    this.todoService.addTodo(this.todos)
-    this.todoService.getTodos();
-    this.todoService.logTodos(); 
+    this.todos = this.todoService.getTodos();   //we get the todos[] from the service and store it our component todos[]
   }
-  fillTodo(){
-    this.todos.push({
-    name: this.name,
-    content: this.content
-  })}
+
+  addTodo(){
+    this.todoService.addTodo(this.todo);
+    this.todo = new Todo;
+  }
+  
+  deleteTodo(todo: Todo){
+    this.todoService.deleteTodo(todo);
+  }
+  
 }
 

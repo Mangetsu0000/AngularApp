@@ -1,0 +1,8 @@
+<div *ngIf="hired.length" class="mb-5">
+    <p>Hired individuals</p>
+    <div id="hired" class="row">
+        <div *ngFor="let hiredp of hired" class="col-4">
+            <app-item [cv] = "hiredp" [size]="60"></app-item>
+        </div>
+    </div>
+</div>

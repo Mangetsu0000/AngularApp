@@ -7,9 +7,15 @@ import {Cv} from "../model/cv";
   styleUrls: ['./item.component.css']
 })
 export class ItemComponent implements OnInit {
+
+  @Input() size: number = 50;
+
   @Input() cv: Cv | null = null;
-  constructor() { }
+
   @Output() itemToList = new EventEmitter<Cv>();
+  
+  constructor() { }
+  
   ngOnInit(): void { 
   }
   itemToListEmitter (){

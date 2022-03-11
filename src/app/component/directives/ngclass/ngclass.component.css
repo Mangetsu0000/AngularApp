@@ -1,0 +1,33 @@
+.box {
+  width: 150px;
+  height: 150px;
+  padding: 50px;
+  border: 1px solid black;
+}
+.allume{
+  background-color: yellow;
+  color: black;
+}
+
+.eteinte{
+  background-color: black;
+  color: white;
+}
+.bigbrick{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.div1, .div2{
+  flex: 1;
+}
+
+.div2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pflex{
+  flex: 1;
+}

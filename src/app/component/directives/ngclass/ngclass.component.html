@@ -1,0 +1,36 @@
+<div class="bigbrick">
+  <div class="div1">
+    <p class="mb-2">Type to rainbow</p>
+    <input class="mb-3"type="text" appRainbow>
+    <p [hidden]="isAllume">
+    avec hidden
+    </p>
+    <p *ngIf="isAllume">
+    avec ngIf
+    </p>
+
+    <div class="box"
+      (click)="interupteur()"
+      [ngClass]="{
+        'allume': isAllume,
+        'eteinte': !isAllume
+      }"
+    >ngclass works!
+    </div>
+
+  </div>  
+
+  <div class="div2">
+
+    <div class="box" appHighlight>test directive</div>
+
+    <div class="pflex ">
+      <p appHighlight [in]="'black'" [out]="'white'">test</p> 
+      <p appHighlight [in]="'red'" [out]="'white'">test</p> 
+      <p appHighlight [in]="'green'" [out]="'white'">test</p> 
+      <p appHighlight [in]="'yellow'" [out]="'black'">test</p> 
+    </div>
+
+  </div>
+
+</div>

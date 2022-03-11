@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,3 +10,4 @@ export class AppComponent {
   color = 'blue';
   title = 'ngSi22122';
 }
+

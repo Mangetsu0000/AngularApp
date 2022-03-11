@@ -1,0 +1,12 @@
+.flexbox{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+#flexelement2, #flexelement1{
+    flex: 1;
+}
+p{
+    text-align: center;
+    font-size: 19px;
+}
